@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Boot</key>
+    <dict>
+      <key>Arguments</key>
+      <string>-v -wegnoegpu</string>
+      <key>Timeout</key>
+      <integer>5</integer>
+    </dict>
+    <key>ACPI</key>
+    <dict>
+      <key>Add</key>
+      <array>
+        <string>SSDT-AWAC.aml</string>
+        <string>SSDT-EC.aml</string>
+        <string>SSDT-PLUG.aml</string>
+      </array>
+      <key>Delete</key>
+      <array />
+    </dict>
+    <key>DeviceProperties</key>
+    <dict>
+      <key>PciRoot(0x0)/Pci(0x1f,0x3)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
+      <dict>
+        <key>device-id</key>
+        <data>AQAAAAAAAA==</data>
+      </dict>
+    </dict>
+    <key>Kernel</key>
+    <dict>
+      <key>Quirks</key>
+      <dict>
+        <key>DisableIOMapper</key>
+        <true />
+        <key>EnableLilu</key>
+        <true />
+        <key>EnablePatching</key>
+        <true />
+      </dict>
+    </dict>
+    <key>Misc</key>
+    <dict>
+      <key>BlessOverride</key>
+      <array />
+      <key>Boot</key>
+      <dict>
+        <key>ConsoleAttributes</key>
+        <integer>0</integer>
+        <key>HibernateMode</key>
+        <string>None</string>
+        <key>HibernateSkipsPicker</key>
+        <false />
+        <key>HideAuxiliary</key>
+        <false />
+        <key>InstanceIdentifier</key>
+        <string></string>
+        <key>LauncherOption</key>
+        <string>Disabled</string>
+        <key>LauncherPath</key>
+        <string>Default</string>
+        <key>PickerAttributes</key>
+        <integer>17</integer>
+        <key>PickerAudioAssist</key>
+        <false />
+        <key>PickerMode</key>
+        <string>External</string>
+        <key>PickerVariant</key>
+        <string>Auto</string>
+        <key>PollAppleHotKeys</key>
+        <true />
+        <key>ShowPicker</key>
+        <true />
+        <key>TakeoffDelay</key>
+        <integer>0</integer>
+        <key>Timeout</key>
+        <integer>5</integer>
+      </dict>
+      <key>Debug</key>
+      <dict>
+        <key>AppleDebug</key>
+        <false />
+        <key>ApplePanic</key>
+        <false />
+        <key>DisableWatchDog</key>
+        <false />
+        <key>DisplayDelay</key>
+        <integer>0</integer>
+        <key>DisplayLevel</key>
+        <integer>2147483650</integer>
+        <key>LogModules</key>
+        <string>*</string>
+        <key>SysReport</key>
+        <false />
+        <key>Target</key>
+        <integer>3</integer>
+      </dict>
+      <key>Entries</key>
+      <array />
+      <key>Security</key>
+      <dict>
+        <key>AllowSetDefault</key>
+        <true />
+        <key>ApECID</key>
+        <integer>0</integer>
+        <key>AuthRestart</key>
+        <false />
+        <key>BlacklistAppleUpdate</key>
+        <true />
+        <key>DmgLoading</key>
+        <string>Signed</string>
+        <key>EnablePassword</key>
+        <false />
+        <key>ExposeSensitiveData</key>
+        <integer>15</integer>
+        <key>HaltLevel</key>
+        <integer>2147483648</integer>
+        <key>PasswordHash</key>
+        <data></data>
+        <key>PasswordSalt</key>
+        <data></data>
+        <key>ScanPolicy</key>
+        <integer>0</integer>
+        <key>SecureBootModel</key>
+        <string>Disabled</string>
+        <key>Vault</key>
+        <string>Optional</string>
+      </dict>
+      <key>Serial</key>
+      <dict>
+        <key>Init</key>
+        <false />
+        <key>Override</key>
+        <false />
+      </dict>
+      <key>Tools</key>
+      <array>
+        <dict>
+          <key>Arguments</key>
+          <string></string>
+          <key>Auxiliary</key>
+          <true />
+          <key>Comment</key>
+          <string>Not signed for security reasons</string>
+          <key>Enabled</key>
+          <false />
+          <key>Flavour</key>
+          <string>OpenShell:UEFIShell:Shell</string>
+          <key>FullNvramAccess</key>
+          <false />
+          <key>Name</key>
+          <string>UEFI Shell</string>
+          <key>Path</key>
+          <string>OpenShell.efi</string>
+          <key>RealPath</key>
+          <false />
+          <key>TextMode</key>
+          <false />
+        </dict>
+        <dict>
+          <key>Arguments</key>
+          <string></string>
+          <key>Auxiliary</key>
+          <true />
+          <key>Comment</key>
+          <string>Memory testing utility</string>
+          <key>Enabled</key>
+          <false />
+          <key>Flavour</key>
+          <string>MemTest</string>
+          <key>FullNvramAccess</key>
+          <false />
+          <key>Name</key>
+          <string>memtest86</string>
+          <key>Path</key>
+          <string>memtest86/BOOTX64.efi</string>
+          <key>RealPath</key>
+          <true />
+          <key>TextMode</key>
+          <false />
+        </dict>
+        <dict>
+          <key>Arguments</key>
+          <string>Shutdown</string>
+          <key>Auxiliary</key>
+          <true />
+          <key>Comment</key>
+          <string>Perform shutdown</string>
+          <key>Enabled</key>
+          <false />
+          <key>Flavour</key>
+          <string>Auto</string>
+          <key>FullNvramAccess</key>
+          <false />
+          <key>Name</key>
+          <string>Shutdown</string>
+          <key>Path</key>
+          <string>ResetSystem.efi</string>
+          <key>RealPath</key>
+          <false />
+          <key>TextMode</key>
+          <false />
+        </dict>
+      </array>
+    </dict>
+    <key>PlatformInfo</key>
+    <dict>
+      <key>Automatic</key>
+      <true />
+      <key>Generic</key>
+      <dict>
+        <key>CPU</key>
+        <string>Intel</string>
+        <key>Model</key>
+        <string>mac14,1</string>
+        <key>SystemProductName</key>
+        <string>Hackintosh</string>
+        <key>SystemSerialNumber</key>
+        <string>1234567890</string>
+        <key>MLB</key>
+        <string>01234567890123456</string>
+        <key>BoardSerialNumber</key>
+        <string>9876543210</string>
+      </dict>
+    </dict>
+    <key>UEFI</key>
+    <dict>
+      <key>Drivers</key>
+      <array>
+        <string>OpenHFSPlus.efi</string>
+        <string>VBoxHfs.efi</string>
+        <string>OpenCore.efi</string>
+      </array>
+      <key>Quirks</key>
+      <dict>
+        <key>AllowNvramReset</key>
+        <true />
+      </dict>
+    </dict>
+    <key>Kexts</key>
+    <dict>
+      <key>OnDemand</key>
+      <array>
+        <string>Lilu.kext</string>
+        <string>AppleALC.kext</string>
+        <string>RealtekRTL8111.kext</string>
+        <string>VirtualSMC.kext</string>
+        <string>SMCProcessor.kext</string>
+        <string>WhateverGreen.kext</string>
+        <string>USBInjectAll.kext</string>
+      </array>
+      <key>Optional</key>
+      <array />
+      <key>Blocked</key>
+      <array />
+    </dict>
+    <key>SystemParameters</key>
+    <dict>
+      <key>InjectKexts</key>
+      <string>Detect</string>
+      <key>InjectSystemID</key>
+      <true />
+      <key>FirmwareFeatures</key>
+      <integer>0</integer>
+      <key>FirmwareFeaturesMask</key>
+      <integer>0</integer>
+    </dict>
+  </dict>
+</plist>
